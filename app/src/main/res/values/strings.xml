@@ -1,0 +1,22 @@
+<resources>
+    //food name
+    <string name="app_name">Naija Meals</string>
+    <string name="food1">Abacha</string>
+    <string name="food2">Ewa Agoyin</string>
+    <string name="food3">Akara</string>
+    <string name="food4">Masa masa</string>
+    <string name="food5">Semo with Efo riro</string>
+    <string name="food6">Ofe Akwu</string>
+    <string name="food7">Egusi</string>
+    <string name="food8">Asaro</string>
+    <string name="food9">Nwo nwo</string>
+    <string name="food10">Jollof rice</string>
+    <string name="food11">Fufu</string>
+    <string name="food12">Moi moi</string>
+    <string name="food13">Dodo Ikire</string>
+    <string name="food14">Tuwo Shinkafa</string>
+    <string name="food15">Eba and Soup</string>
+    <string name="todo">TODO</string>
+
+
+</resources>
