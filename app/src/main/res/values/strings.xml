@@ -1,22 +1,57 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     //food name
     <string name="app_name">Naija Meals</string>
-    <string name="food1">Abacha</string>
-    <string name="food2">Ewa Agoyin</string>
-    <string name="food3">Akara</string>
-    <string name="food4">Masa masa</string>
-    <string name="food5">Semo with Efo riro</string>
-    <string name="food6">Ofe Akwu</string>
-    <string name="food7">Egusi</string>
-    <string name="food8">Asaro</string>
-    <string name="food9">Nwo nwo</string>
-    <string name="food10">Jollof rice</string>
-    <string name="food11">Fufu</string>
-    <string name="food12">Moi moi</string>
-    <string name="food13">Dodo Ikire</string>
-    <string name="food14">Tuwo Shinkafa</string>
-    <string name="food15">Eba and Soup</string>
     <string name="todo">TODO</string>
+    <string name="click_here_for_more_details">click here for more details</string>
+    <string name="textview">TextView</string>
+    <string name="switch_icon">switch_icon</string>
+
+    <string name="abacha">Abacha is an Eastern Nigeria dish made using dried, shredded cassava. You can eat it as a snack or a full meal. There are many variations to making this salad, but the more ingredients you add, the tastier the dish is. Whichever way you prepare or eat it, warm or cold, it will still come out delicious.
+</string>
+
+    <string name="ewa_agoyin">Ewa Agoyin (Ewa Aganyin) is a very popular street food, especially on Lagos streets in Nigeria and it is very easy to prepare at home. It is made by boiling Beans until it’s really tender then mashing it. This delicious meal is usually accompanied by a spicy stew which is usually referred to as Ewa Agoyin (Ewa Agoyin) Stew. Ewa Aganyin sauce is a spicy sauce made with dried tatashe, chili pepper, and lot of onions.
+</string>
+
+    <string name="akara">Akara (Black Eyed Peas Fritters) is deep-fried bean cake made from black-eyed peas paste.. It is crispy, golden, tasty, downright irresistible, and quite filling.
+</string>
+
+    <string name="masa_masa">Rice cakes (masa) are a northern Nigerian delicacy, particularly among the Hausa tribe. Made with rice and just a few other ingredients, this dish is easy and inexpensive to prepare. It is nutritious, delicious and filling, and its fluffy goodness can be enjoyed alone or paired with a sauce.
+</string>
+
+    <string name="semoandeforiro">Efo Riro is a rich vegetable soup that is native to the Yorubas of Western Nigeria. The vegetables that can be used to cook this soup are Efo Shoko or Efo Tete (Green Amaranth). It is eaten well with Semo, a Nigerian solid food.
+</string>
+
+    <string name="ofeakwu">Ofe Akwu is a delicious African delicacy Made from the creamy extract got from pulverized Palm nut fruits and can be eaten with rice.
+</string>
+
+    <string name="egusi">Egusi Soup is a rich and savory West African soup made with ground melon seeds and eaten with fufu dishes
+</string>
+
+    <string name="asaro">Asaro is another delicious Nigerian yam dish cooked in a well-seasoned pepper mix until soft and fluffy with some yam chunks.
+</string>
+
+    <string name="ngwongwo">Ngwo ngwo goat offal pepper soup is a delicacy cooked in the Eastern part of Nigeria. The parts of the goat used are the tripe (stomach locally called towel), intestines, liver, kidney, heart, spleen, testicles and a bit of the flesh.
+</string>
+
+    <string name="jollofrice">Jollof Rice, sometimes called jellof rice, is a classic rice dish cooked in a flavorful tomato-infused broth.
+</string>
+
+    <string name="fufu">Fufu, which is believed to have originated in modern-day Ghana, is commonly made by pounding starchy food crops such as cassava, yam, plantain and others
+</string>
+
+    <string name="moinmoin">Moin-Moin or Moimoi is a Yoruba steamed bean pudding made from a mixture of washed and peeled black-eyed beans, onions and fresh ground red peppers.
+</string>
+
+    <string name="dodoikire"> Dodo Ikire is a Nigerian spicy fried plantain snack. It is named after a town called Ikire, Ikire is in the south western part of Nigeria
+</string>
+
+    <string name="tuwoshinkafa"> Tuwo Shinkafa is a northern Nigerian solid food that is prepared with the soft rice variety. It is usually served with Northern Nigerian soups.
+</string>
+
+    <string name="eba"> Ẹ̀bà is a Nigerian staple food made from dried grated cassava flour, commonly known as garri. Often eaten with Yoruba or Igbo soups.
+</string>
+
+    <string name="more_details" tools:ignore="TypographyEllipsis">more details...</string>
 
 
 </resources>

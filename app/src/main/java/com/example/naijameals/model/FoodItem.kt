@@ -1,8 +1,8 @@
 package com.example.naijameals.model
 import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 
 
-data class FoodItem(val foodName: String, val foodPrices: String,
-    @DrawableRes val imageResourceId: Int)
+data class FoodItem(val id: Int, val foodName: String, @DrawableRes val imageResourceId: Int)
 
 
