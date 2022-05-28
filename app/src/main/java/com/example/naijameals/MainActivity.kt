@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.naijameals.adapter.ItemAdapter
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private var isGridLayoutManager = true
     @SuppressLint("StringFormatInvalid")
     override fun onCreate(savedInstanceState: Bundle?) {
+       // getUserData()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -44,7 +46,13 @@ aboutFood = arrayOf(
         R.string.eba)
 )
 
-        chooseLayout()
+        newRecyclerView = findViewById(R.id.recycler_view)
+        newRecyclerView.layoutManager = LinearLayoutManager(this)
+        newRecyclerView.setHasFixedSize(true)
+        newArrayList = arrayListOf<FoodItem>()
+        getUserData()
+
+//        chooseLayout()
     }
 
     private fun chooseLayout() {
@@ -52,7 +60,7 @@ aboutFood = arrayOf(
         if (isGridLayoutManager) {
             recyclerStyle.layoutManager = GridLayoutManager(applicationContext, 2)
         } else {
-            recyclerStyle.layoutManager = StaggeredGridLayoutManager(2, 0)
+            recyclerStyle.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         }
         val myDataset = DataSource().loadFoodItem()
         recyclerStyle.adapter = ItemAdapter(myDataset)

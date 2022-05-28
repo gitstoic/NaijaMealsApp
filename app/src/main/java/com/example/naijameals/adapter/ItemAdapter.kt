@@ -51,7 +51,7 @@ val item = dataSet[position]
 //            val context = holder.itemView.context
 //            val intent = Intent(context, DetailActivity::class.java)
 //
-////            intent.putExtra("recipes", recipes[position])//rubbish
+//           intent.putExtra("recipes", recipes[position])//rubbish
 //            context.startActivity(intent)
 //        }
     }
