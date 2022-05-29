@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.naijameals.adapter.ItemAdapter
 import com.example.naijameals.data.DataSource
 
+
 class MainActivity : AppCompatActivity() {
     private lateinit var aboutFood : Array<String>
      private lateinit var newArrayList: ArrayList<DataSource>
