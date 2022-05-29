@@ -52,7 +52,7 @@
 </string>
 
     <string name="more_details" tools:ignore="TypographyEllipsis">more details...</string>
-
+    <string name="more_detailss">MORE DETAILS</string>
 
 
 </resources>

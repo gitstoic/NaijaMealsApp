@@ -9,10 +9,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-
-
         val allRecipes : TextView = findViewById(R.id.activity2detail)
-//val allRecipes =TextView= findViewById(R.id.activity2detail)
 val bundle : Bundle?= intent.extras
         val aboutFood = bundle!!.getString("aboutFood")
 

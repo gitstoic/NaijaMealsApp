@@ -32,41 +32,41 @@ class MainActivity : AppCompatActivity() {
 
         imageId = arrayOf(
             R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha,
-            R.drawable.abacha
+            R.drawable.ewaagoyin,
+            R.drawable.akara,
+            R.drawable.masamasa,
+            R.drawable.semo_eforiro,
+            R.drawable.ofeakwu,
+            R.drawable.egusi,
+            R.drawable.asaro,
+            R.drawable.ngwongwo,
+            R.drawable.jollofrice,
+            R.drawable.fufu,
+            R.drawable.moin_moin,
+            R.drawable.dodo_ikire,
+            R.drawable.tuwo,
+            R.drawable.eba
         )
 
 
 
 
  heading =  arrayOf(
-     "abacha",
-     "ewa_agoyin",
-     "akara",
-     "masa_masa",
-     "semoandeforiro",
-     "ofeakwu",
-     "egusi",
-     "asaro",
-     "ngwongwo",
-     "jollofrice",
-     "fufu",
-     "moinmoin",
-     "dodoikire",
-     "tuwoshinkafa",
-     "eba"
+     "Abacha",
+     "Ewa Agoyin",
+     "Akara",
+     "Masa masa",
+     "Semo & Efo",
+     "Ofe Akwu",
+     "Egusi",
+     "Asaro",
+     "Ngwo ngwo",
+     "Jollofrice",
+     "Fufu",
+     "Moin moin",
+     "Dodo ikire",
+     "Tuwo shinkafa",
+     "Eba"
  )
         price = arrayOf(
             "N600",
@@ -89,20 +89,20 @@ class MainActivity : AppCompatActivity() {
 
 aboutFood = arrayOf(
    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha),
-    getString(R.string.abacha)
+    getString(R.string.ewa_agoyin),
+    getString(R.string.akara),
+    getString(R.string.masa_masa),
+    getString(R.string.semoandeforiro),
+    getString(R.string.ofeakwu),
+    getString(R.string.egusi),
+    getString(R.string.asaro),
+    getString(R.string.ngwongwo),
+    getString(R.string.jollofrice),
+    getString(R.string.fufu),
+    getString(R.string.moinmoin),
+    getString(R.string.dodoikire),
+    getString(R.string.tuwoshinkafa),
+    getString(R.string.eba)
 )
 
 
@@ -163,7 +163,7 @@ aboutFood = arrayOf(
             newArrayList.add(naijafoods)
         }
 
-        var adapter = ItemAdapter(newArrayList)
+        val adapter = ItemAdapter(newArrayList)
         newRecyclerView.adapter= adapter
         adapter.setOnItemClickListener(object : ItemAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {

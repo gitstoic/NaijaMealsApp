@@ -28,7 +28,7 @@ class ItemAdapter(private val dataSet: ArrayList<DataSource>):
 
     class ItemViewHolder(view: View, listener: onItemClickListener) : RecyclerView.ViewHolder(view) {
         val foodNameText: TextView = itemView.findViewById(R.id.food_name)
-        val btnDetail: Button = itemView.findViewById(R.id.btn_detail)
+        val foodPriceText: TextView = itemView.findViewById(R.id.food_price)
         val foodImage: ImageView= view.findViewById(R.id.food_image)
 
         init {
@@ -47,15 +47,8 @@ val adapterLayout= LayoutInflater.from(parent.context).inflate(R.layout.list_ite
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 val item = dataSet[position]
         holder.foodNameText.text = item.heading
+        holder.foodPriceText.text = item.price
         holder.foodImage.setImageResource(item.foodImage)
-
-//        holder.btnDetail.setOnClickListener {
-//            val context = holder.itemView.context
-//            val intent = Intent(context, DetailActivity::class.java)
-//
-//           intent.putExtra("recipes", recipes[position])//rubbish
-//            context.startActivity(intent)
-//        }
     }
     override fun getItemCount(): Int =dataSet.size
 }
