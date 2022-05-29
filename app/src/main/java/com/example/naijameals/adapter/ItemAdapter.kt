@@ -10,10 +10,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.naijameals.DetailActivity
 import com.example.naijameals.R
+import com.example.naijameals.data.DataSource
 import com.example.naijameals.model.FoodItem
 
 
-class ItemAdapter(private val dataSet: List<FoodItem>):
+class ItemAdapter(private val dataSet: ArrayList<DataSource>):
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>(){
 
     private lateinit var mListener: onItemClickListener
@@ -45,8 +46,9 @@ val adapterLayout= LayoutInflater.from(parent.context).inflate(R.layout.list_ite
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 val item = dataSet[position]
-        holder.foodNameText.text = item.foodName
-        holder.foodImage.setImageResource(item.imageResourceId)
+        holder.foodNameText.text = item.heading
+        holder.foodImage.setImageResource(item.foodImage)
+
 //        holder.btnDetail.setOnClickListener {
 //            val context = holder.itemView.context
 //            val intent = Intent(context, DetailActivity::class.java)
