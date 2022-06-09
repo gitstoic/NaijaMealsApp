@@ -17,6 +17,7 @@ import com.example.naijameals.model.FoodItem
 class ItemAdapter(private val dataSet: ArrayList<DataSource>):
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>(){
 
+    //og
     private lateinit var mListener: onItemClickListener
     interface onItemClickListener{
         fun onItemClick(position: Int)
@@ -36,7 +37,6 @@ class ItemAdapter(private val dataSet: ArrayList<DataSource>):
                 listener.onItemClick(adapterPosition)
             }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

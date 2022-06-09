@@ -7,29 +7,29 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.naijameals.adapter.ItemAdapter
 import com.example.naijameals.data.DataSource
+import com.example.naijameals.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var aboutFood : Array<String>
-     private lateinit var newArrayList: ArrayList<DataSource>
-     private lateinit var newRecyclerView: RecyclerView
     private var isGridLayoutManager = true
-    lateinit var imageId : Array<Int>
-    lateinit var price   : Array<String>
-    lateinit var heading : Array<String>
+//    private val myDataSet = DataSource().loadAboutFood()
+    private lateinit var newRecyclerView: RecyclerView
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
-       // getUserData()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        newRecyclerView = binding.recyclerView
+        newRecyclerView.setHasFixedSize(true)
+        chooseLayout()
 
-
-
-
+//array items
         imageId = arrayOf(
             R.drawable.abacha,
             R.drawable.ewaagoyin,
@@ -47,9 +47,6 @@ class MainActivity : AppCompatActivity() {
             R.drawable.tuwo,
             R.drawable.eba
         )
-
-
-
 
  heading =  arrayOf(
      "Abacha",
@@ -86,7 +83,6 @@ class MainActivity : AppCompatActivity() {
             "N800"
         )
 
-
 aboutFood = arrayOf(
    getString(R.string.abacha),
     getString(R.string.ewa_agoyin),
@@ -104,28 +100,22 @@ aboutFood = arrayOf(
     getString(R.string.tuwoshinkafa),
     getString(R.string.eba)
 )
-
-
-
-        newRecyclerView = findViewById(R.id.recycler_view)
-        newRecyclerView.layoutManager = LinearLayoutManager(this)
-        newRecyclerView.setHasFixedSize(true)
         newArrayList = arrayListOf<DataSource>()
         getUserData()
-
-//        chooseLayout()
     }
 
+
+
+
     private fun chooseLayout() {
-//        val recyclerStyle = findViewById<RecyclerView>(R.id.recycler_view)
         if (isGridLayoutManager) {
-            newRecyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
+            newRecyclerView.layoutManager = GridLayoutManager(applicationContext, 1)
         } else {
             newRecyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         }
-//        val myDataset = DataSource().loadFoodItem()
-//        recyclerStyle.adapter = ItemAdapter(myDataset)
+//        newRecyclerView.adapter = ItemAdapter(myDataSet)
     }
+
     private fun setIcon(menuItem: MenuItem?){
         if (menuItem==null)return
         menuItem.icon=
@@ -139,7 +129,6 @@ aboutFood = arrayOf(
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         //inflating layout
         menuInflater.inflate(R.menu.layout_menu, menu)
-
         val layoutButton= menu?.findItem(R.id.action_switch)
         setIcon(layoutButton)
         return true
@@ -157,12 +146,24 @@ aboutFood = arrayOf(
         }
     }
 
+
+
+
+
+
+
+    //initializing array items og
+    private lateinit var aboutFood : Array<String>
+    private lateinit var newArrayList: ArrayList<DataSource>
+    lateinit var imageId : Array<Int>
+    lateinit var price   : Array<String>
+    lateinit var heading : Array<String>
+
     private fun getUserData(){
         for(i in imageId.indices){
             val naijafoods = DataSource(imageId[i], heading[i], price[i])
             newArrayList.add(naijafoods)
         }
-
         val adapter = ItemAdapter(newArrayList)
         newRecyclerView.adapter= adapter
         adapter.setOnItemClickListener(object : ItemAdapter.onItemClickListener{
@@ -170,9 +171,5 @@ aboutFood = arrayOf(
                 val intent= Intent(this@MainActivity, DetailActivity::class.java)
                 intent.putExtra("aboutFood", aboutFood[position])
                 startActivity(intent)
-            }
-        })
-
-    }
-
+            } })}
     }
