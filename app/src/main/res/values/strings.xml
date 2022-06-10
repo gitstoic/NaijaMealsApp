@@ -51,9 +51,9 @@
     <string name="eba"> Ẹ̀bà is a Nigerian staple food made from dried grated cassava flour, commonly known as garri. Often eaten with Yoruba or Igbo soups.
 </string>
 
-    <string name="more_details" tools:ignore="TypographyEllipsis">more details...</string>
-    <string name="more_detailss">MORE DETAILS</string>
+    <string name="more_detailss">more details</string>
     <string name="more_detail">more details</string>
+    <string name="click_here">click here</string>
 
 
 </resources>
