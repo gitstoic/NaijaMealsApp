@@ -14,41 +14,35 @@ import com.example.naijameals.data.DataSource
 import com.example.naijameals.model.FoodItem
 
 
-class ItemAdapter(private val dataSet: ArrayList<DataSource>):
+class ItemAdapter(private val dataSet: List<FoodItem>):
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>(){
 
-    //og
-    private lateinit var mListener: onItemClickListener
-    interface onItemClickListener{
-        fun onItemClick(position: Int)
-    }
-
-    fun setOnItemClickListener(listener: onItemClickListener){
-        mListener= listener
-    }
-
-    class ItemViewHolder(view: View, listener: onItemClickListener) : RecyclerView.ViewHolder(view) {
+    class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val foodNameText: TextView = itemView.findViewById(R.id.food_name)
         val foodPriceText: TextView = itemView.findViewById(R.id.food_price)
-        val foodImage: ImageView= view.findViewById(R.id.food_image)
-
-        init {
-            view.setOnClickListener{
-                listener.onItemClick(adapterPosition)
-            }
-        }
+        val foodImage: ImageView= itemView.findViewById(R.id.food_image)
+val button: Button = itemView.findViewById(R.id. btn_deets)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
 val adapterLayout= LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
-        return ItemViewHolder(adapterLayout, mListener)
+        return ItemViewHolder(adapterLayout)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
 val item = dataSet[position]
-        holder.foodNameText.text = item.heading
-        holder.foodPriceText.text = item.price
+        holder.foodNameText.text = item.foodName
+        holder.foodPriceText.text = item.foodPrice
         holder.foodImage.setImageResource(item.foodImage)
+        holder.button.text
+
+        holder.button.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.DEETS, item.foodDeets)
+            context.startActivity(intent)
+        }
+
     }
     override fun getItemCount(): Int =dataSet.size
 }

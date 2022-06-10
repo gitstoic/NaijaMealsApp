@@ -1,18 +1,27 @@
 package com.example.naijameals
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.naijameals.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
-
-        val allRecipes : TextView = findViewById(R.id.activity2detail)
-val bundle : Bundle?= intent.extras
-        val aboutFood = bundle!!.getString("aboutFood")
-
-        allRecipes.text = aboutFood
+    companion object {
+        const val DEETS: String = "deets"
     }
-}
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        val binding = ActivityDetailBinding.inflate(layoutInflater)
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+        aboutFood(binding)
+    }
+
+    private fun aboutFood(binding: ActivityDetailBinding) {
+         val foodDeets = intent.getIntExtra(DEETS, R.string.abacha)
+
+          binding.apply {
+              activity2detail.text = getString(foodDeets)
+
+          }
+        }
+    }
