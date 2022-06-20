@@ -2,7 +2,6 @@
     //food name
     <string name="app_name">Naija Meals</string>
     <string name="todo">TODO</string>
-    <string name="click_here_for_more_details">click here for more details</string>
     <string name="textview">TextView</string>
     <string name="switch_icon">switch_icon</string>
 
@@ -54,6 +53,8 @@
     <string name="more_detailss">more details</string>
     <string name="more_detail">more details</string>
     <string name="click_here">click here</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

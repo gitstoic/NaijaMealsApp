@@ -1,8 +1,8 @@
 package com.example.naijameals.model
-import android.media.Image
+import android.os.Parcelable
 import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
+import kotlinx.parcelize.Parcelize
 
-
-data class FoodItem( val foodName: String, @StringRes val foodDeets: Int, val foodPrice: String, @DrawableRes val foodImage: Int)
-
+@Parcelize
+data class FoodItem(
+    val foodName: String,  val foodDeets: String, val foodPrice: Double, @DrawableRes val foodImage: Int): Parcelable
